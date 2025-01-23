@@ -8,8 +8,8 @@ namespace MVP_Pattern_Cal.Views
 {
     public interface ICalculadoraViews
     {
-        string PrimerNumero { get; }
-        string SegundoNumero { get; }
+        string PrimerNumero { get; set; }
+        string SegundoNumero { get; set; }
         string Resultado { set; }
 
         event EventHandler SumarRequested;

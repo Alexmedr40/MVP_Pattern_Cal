@@ -33,6 +33,8 @@ namespace MVP_Pattern_Cal.Presenters
         private void OnLimpiarRequested(object sender, EventArgs e)
         {
             _view.Resultado = string.Empty;
+            _view.PrimerNumero =  string.Empty;
+            _view.SegundoNumero = string.Empty;
         }
 
         private void Calcular(Func<double, double, double> operation)
