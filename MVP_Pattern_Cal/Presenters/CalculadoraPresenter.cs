@@ -29,12 +29,10 @@ namespace MVP_Pattern_Cal.Presenters
         private void OnRestarRequested(object sender, EventArgs e) => Calcular((a, b) => _model.Restar(a, b));
         private void OnMultiplicarRequested(object sender, EventArgs e) => Calcular((a, b) => _model.Multiplicar(a, b));
         private void OnDividirRequested(object sender, EventArgs e) => Calcular((a, b) => _model.Dividir(a, b));
-        //iiu
+
         private void OnLimpiarRequested(object sender, EventArgs e)
         {
             _view.Resultado = string.Empty;
-            _view.PrimerNumero = string.Empty;
-            _view.SegundoNumero = string.Empty;
         }
 
         private void Calcular(Func<double, double, double> operation)

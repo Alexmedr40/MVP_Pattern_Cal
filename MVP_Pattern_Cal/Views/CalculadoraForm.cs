@@ -25,17 +25,9 @@ namespace MVP_Pattern_Cal
             BtnClean.Click += (sender, e) => LimpiarRequested?.Invoke(sender, e);
         }
 
-        public string PrimerNumero
-        {
-            get => txtFirstNumber.Text;
-            set => txtFirstNumber.Text = value; 
-        }
+        public string PrimerNumero => txtFirstNumber.Text;
 
-        public string SegundoNumero
-        {
-            get => txtSecondNumber.Text;
-            set => txtSecondNumber.Text = value; 
-        }
+        public string SegundoNumero => txtSecondNumber.Text;
 
         public string Resultado { set => lblResultado.Text = value; }
 
@@ -48,6 +40,13 @@ namespace MVP_Pattern_Cal
         public void MostrarError(string message)
         {
             MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        public void LimpiarCampos() 
+        {
+            txtFirstNumber.Clear();
+            txtSecondNumber.Clear();
+            lblResultado.Text = string.Empty;
         }
     }
 }
